@@ -1,37 +1,37 @@
-System story
+###System story
 ____________
  Приложение состоит из трех сервисов:
 1. Сервис1 - админка, отвечает за взаимодействие с пользователем, хранение и отображение пользователю информации о введенных функциях и сгенерированных графиках.
 2. Сервис2 - генератор данных, отвечает за генерацию данных для графика. Принимает текстовое описание функции, генерирует по ним массив [(x, y)].
 3. Сервис3 - генератор изображений, генерирует изображение по подготовленным данным.
 
-Установка и Запуск (DEV)
+###Установка и Запуск (DEV)
 ____________
  - Установка программ (Ubuntu ):
  
-     .. code-block:: bash
-     
+     ```bash
         sudo apt update && apt install -y git apt docker.io docker-compose
+     ```
         
  - Клонируем приложежение:
  
-     .. code-block:: bash
-     
+     ```bash
         git clone https://github.com/mii13/4c6e66496d36a47d8ede81908a6c4cc6.git project
+      ```
         
  - Запуск:
- 
-      .. code-block:: bash
-      
+    ```bash    
         cd project
         docker-compose up --build
-        
+    ```       
  - Доступ до админки:  
- 
-    .. code-block:: bash
-    
+     ```bash
        docker-compose run admin-panel python manage.py createsuperuser
-       
+     ``` 
+     ```
+       url: http://localhost:8000/admin/
+     ```  
+     
  
  
  docker-compose environments:
